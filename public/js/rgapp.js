@@ -12,7 +12,7 @@ var rgApp = angular.module('rgApp', ['ngRoute']);
 
             // route for the about page
             .when('/about', {
-                templateUrl : 'components/home/home.html',
+                templateUrl : 'components/financials/financials.html',
                 controller  : 'homeController'
             })
 
