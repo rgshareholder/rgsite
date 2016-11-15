@@ -10,17 +10,26 @@ var rgApp = angular.module('rgApp', ['ngRoute']);
                 controller  : 'homeController'
             })
 
-            // route for the about page
-            .when('/about', {
-                templateUrl : 'components/financials/financials.html',
-                controller  : 'homeController'
+            // RESIDENTS
+            .when('/financials', {
+                templateUrl : 'components/financials/financials.html'
+            })
+            .when('/boardofdirectors', {
+                templateUrl : 'components/boardofdirectors/boardofdirectors.html'
             })
 
-            // route for the contact page
-            .when('/contact', {
-                templateUrl : 'components/home/home.html',
+            // PURCHASERS
+            .when('/purchaseprocess', {
+                templateUrl : 'components/purchaseprocess/purchaseprocess.html',
                 controller  : 'homeController'
-            });
+            })
+            .when('/unitsforsale', {
+                templateUrl : 'components/unitsforsale/unitsforsale.html',
+                controller  : 'homeController'
+            })
+            .otherwise({
+		        templateUrl : 'components/home/home.html'
+	        });
     });
 
     // create the controller and inject Angular's $scope
